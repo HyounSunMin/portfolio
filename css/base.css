@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+@font-face{
+  src:url(../fonts/playfair-display-sc-cufonfonts/PlayfairDisplaySC-Bold.ttf);
+  font-family:"Play";
+}
+@font-face{
+  src:url(../fonts/playfair-display-sc-cufonfonts/PlayfairDisplaySC-Black.ttf);
+  font-family:"Play-black";
+}
+@font-face{
+  src:url(../fonts/playfair-display-sc-cufonfonts/PlayfairDisplaySC-Regular.ttf);
+  font-family:"Play-r";
+}
+@font-face{
+  src:url(../fonts/jalnan/Jalnan.ttf);
+  font-family:"jalnan"
+}
+@font-face{
+  src:url(../fonts/future_light/Future\ Light.ttf);
+  font-family:"future";
+}
+
+*{margin:0px; padding:0px;}
+ul, li, ol{list-style:none;}
+a{
+  color:#333;
+  font-size:12px;
+  text-decoration:none;
+}
+body{
+  font-family:'맑은 고딕',arial, 'sans-serif';
+  font-size:12px;
+  color:#333;
+  background-color:#000000;
+  overflow-x:hidden;
+} 
+/* h2{
+  font-family: "Play", arial, "sans-serif" !important;
+}
+p{
+  font-family: "Play-r", arial, "sans-serif" !important;
+} */

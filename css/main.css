@@ -1,0 +1,850 @@
+@charset "utf-8";
+
+  /* 헤더시작 */
+  header{
+    position:fixed;
+    width:100%; height:80px;
+    z-index:1000;
+    transition:0.3s;
+    right:0px;
+  }
+  header:hover{
+    background:rgba(255, 255, 255,.9);
+  }
+  header > h1{
+    width:200px;
+    float:left;
+    margin:2px 40px;
+  }
+  header > h1 > a{}
+  header > h1 > a > img{ width:100%;}
+
+  header nav{
+    height:80px;
+    float:right;
+    position:relative;
+  }
+  header nav > .menu{
+    width:900px;
+    display:flex;
+    justify-content:space-around;
+    margin:27px;
+    transition:0.3s;
+  }
+  header nav > .menu >li{
+    width:100%;
+    text-align:center;
+  }
+  header nav > ul > li > a{
+    display:block;
+    width:100%;
+    color:#fff;
+    padding:5px 0px;
+    text-align:center;
+    transition:0.5s;
+  }
+  header nav > .menu > li > a:hover{
+    opacity:0.7;
+    transform:scale(1.1); 
+  }
+
+  header > nav > .menu01{
+    width:30px;
+    float:right;
+    display:flex;
+    border:1px solid #333;
+    margin:30px 20px;
+    padding-right:20px;
+    background-color:rgba(255, 255, 255, .9);
+    border-radius:25px;
+    z-index:9998;
+    transition:0.5s;
+    overflow:hidden;
+  }
+  .m_act{
+    width:500px !important;
+  }
+  .menu01 > li{
+    width:100px;
+    margin:10px;
+  }
+  .menu01 > li > a{
+    color:#333;
+  }
+  
+  .arrow{
+    width:60px; height:60px;
+    position:absolute;
+    right:-3px;
+    background-color:#333;
+    border-radius:50%;
+    margin:22px;
+    padding:7px;
+    box-sizing:border-box;
+    cursor:pointer;
+    display:none;
+    z-index:9999;
+    transition:0.5s;
+  }
+  .arrow > div{
+    position:relative;
+    width:35px; height:6px;
+    background-color:#fff;
+    margin:7px auto 0px auto;
+    border-radius:10px;
+    transition:0.3s;
+  }
+  .a01{
+    transform:rotate(30deg);
+    width:23px !important;
+    left:9px; top:8px;
+  }
+  .a02{
+    width:30px;
+    right:0px;
+  }
+  .a03{
+    transform:rotate(-30deg);
+    width:23px !important;
+    left:9px; bottom:8px;
+  }
+
+
+
+
+
+/* 메인시작 */
+  main{clear:both;}
+  #banner{
+    width:100%; height:960px;
+    background-color:none;
+    overflow:hidden;
+  }
+  #banner > video{
+    width:100%;
+  }
+  #banner > h2{
+    font-size:80px; 
+    color:#fff;
+    font-weight:bold;
+    position:absolute;
+    top:50%; left:50%;
+    transform:translate(-50%, -50%);
+    font-family:"play-black",arial, 'sans-serif';
+  }
+  #banner > p{
+    position:absolute;
+    top:40%; left:50%;
+    color:#fff;
+    font-size:25px;
+    transform:translatex(-50%);
+    font-family:"future",arial, 'sans-serif';
+  }
+  #banner > .p01{
+  }
+  #banner > .p02{
+    top:60%; left:50%;
+  }
+  .wheel{
+    position:absolute;
+    bottom:2%; left:50%;
+    transform:translateX(-50%);
+    z-index:9999;
+  }
+  .wheel img{
+    width:80px; 
+  }
+  .wheel span{
+    display:block;
+    width:10px; height:10px;
+    position:fixed;
+    bottom:25%; left:50%;
+    transform:translateX(-50%);
+    border-radius:50%;
+    background:#fff;
+    cursor:default;
+  }
+
+  /* about시작 */
+  #about{
+    width:100%; height:960px;
+    background:#000;
+    position:relative;
+  }
+  #about_box01{
+    width:1240px; height:700px;
+    margin:0px auto;
+    position:relative;
+  }
+  #about_box01 > ul{
+    display:flex;
+    justify-content:flex-end;
+  }
+  #about_box01 > ul > li{
+    height:70px;
+  }
+  #about_box01 > ul > li a{
+    display:block;
+    padding:5px 15px;
+    margin-top:40px;
+    color:#fff;
+    transition:0.2s;
+  }
+  #about_box01 > ul > li > div{
+    width:100%; height:640px;
+    position:absolute;
+    bottom:0px; left:0px;
+    display:none;
+  }
+  #about_box01 ul > img{
+    position:absolute;
+    top:70px;
+    width:80%;
+    z-index:0;
+  }
+  .font{
+    transform:scale(1.1);
+    font-weight:bold;
+  }
+
+  .profile{
+    font-size:20px;
+    color:#fff;
+    z-index:10;
+    position:relative;
+    display:none;
+  }
+  .profile > h3{
+    position:absolute;
+    top:15%; left:15%;
+    line-height:35px;
+    display:none;
+  }
+  .profile > h3 img{
+    position:absolute;
+    top:7px; left:-65px;
+    width:64px; height:60px;
+  }
+  .profile > .hide_box{
+    width:50px; height:10px;
+    position:absolute;
+    top:40%; left:11%;
+    overflow:hidden;
+  }
+  .profile .p_box01{
+    width:350px; height:315px;
+    position:absolute;
+    top:0%; left:0%;
+    font-size:16px;
+    line-height:45px;
+    z-index:10;
+    display:flex;
+    overflow:hidden;
+  }
+  .p_box01 > div{
+    width:22px; height:315px;
+    background:rgb(112, 112, 112);
+    margin-right:30px;
+  }
+  .profile .p_box02{
+    width:0px; height:20px;
+    position:relative;
+    top:100px; left:50%;
+    font-size:18px;
+    line-height:25px;
+    z-index:10;
+    text-align:left;
+    overflow:hidden;
+  }
+  .profile .p_box02 img{
+    width:420px;
+    position:absolute;
+    left:0px;
+  }
+  
+  .career{
+    color:#fff;
+  }
+  .career > h3{
+    margin:50px 0px 100px 100px;
+    line-height:35px;
+    font-size:25px;
+    transition:3s;
+  }
+  .career > .box01, .box02{
+    width:20px; height:60px;
+    background-color:#ccc;
+    float:left;
+    margin-left:115px;
+  }
+  .career > h3 img{
+    transform:translatey(23px);
+    width:64px; height:60px;
+  }
+  .career > p{
+    margin:20px 0px 50px 150px;
+    line-height:25px; 
+  }
+  .career > p > span{
+    font-size:24px;
+    font-weight:bold;
+  }
+  .career >.p_box02{
+    width:500px; height:550px;
+    position:absolute;
+    top:10%; right:0%;
+    font-size:18px;
+    line-height:25px;
+    z-index:10;
+    text-align:left;
+    overflow:hidden;
+  }
+  .career .p_box02 img{
+    width:420px;
+    position:absolute;
+    top:0px; left:0px;
+  }
+
+
+
+  #about_box02{
+    width:100%; height:260px;
+    background-color:#000;
+    position:relative;
+    color:#fff;
+  }
+  .skill{
+    width:100%; height:260px;
+    margin:0px auto;
+    text-align:center;
+  }
+  .skill > div{
+    width:180px; height:240px;
+    margin:10px;
+    display:inline-block;
+    position:relative;
+    overflow:hidden;
+  }
+  .skill > div p{
+    margin-top:10px;
+  }
+  .skill > div > .g_box{
+    width:100%; height:180px;
+    position:absolute;
+    bottom:0px;
+    transition:0.5s;
+  }
+  .skill > div > .g_box > img{
+    width:100%;
+    position:absolute;
+    left:0px;
+    z-index:500;
+  }
+  .skill > div > .g_box > p{
+    margin:30px auto 0px auto;
+    line-height:25px;
+    display:none;
+    transition:1s;
+  }
+
+
+
+  /* 스킬 게이지바 */
+  .skill > .Photo > .g_box > .gauge{
+    position:absolute;
+    left:2px; bottom:-100%;
+    width:100%; height:180px;
+    background-color:#fff;
+    z-index:100;
+  }
+  .skill > .illust > .g_box > .gauge{
+    position:absolute;
+    left:2px; bottom:-100%;
+    width:100%; height:180px;
+    background-color:#fff;
+    z-index:100;
+  }
+  .skill > .HTML > .g_box > .gauge{
+    position:absolute;
+    left:2px; bottom:-100%;
+    width:100%; height:180px;
+    background-color:#fff;
+    z-index:100;
+  }
+  .skill > .CSS > .g_box > .gauge{
+    position:absolute;
+    left:2px; bottom:-100%;
+    width:100%; height:180px;
+    background-color:#fff;
+    z-index:100;
+  }
+  .skill > .java > .g_box > .gauge{
+    position:absolute;
+    left:2px; bottom:-100%;
+    width:100%; height:180px;
+    background-color:#fff;
+    z-index:100;
+  }
+  .skill > .jquery > .g_box > .gauge{
+    position:absolute;
+    left:2px; bottom:-100%;
+    width:100%; height:180px;
+    background-color:#fff;
+    z-index:100;
+  }
+
+
+
+  /* portfolio 시작 */
+  .port_n{
+    position:fixed; top:50%; right:130px;
+    transform:translateY(-50%);
+    cursor:pointer;
+    display:none;
+  }
+  .port_n > ul{
+    width:11px; 
+    background-color:#fff;
+    position:relative;
+  }
+  .port_n > ul > li{
+    width:100%;  height:65px;
+    border:1px solid #333;
+    background-color:#fff;
+  }
+  .act{
+    background:#000 !important;
+    border:2px solid #fff !important;
+    transform:translateX(-1px);
+    transition:0.5s;
+  }
+  .act01{
+    color:#000 !important;
+    font-weight:bold;
+  }
+  .port_n > ul > li > span{
+    display:inline-block;
+    width: 100%; height:100%;
+  }
+  #portfolio{
+    width:100%;
+  }
+  #portfolio > article{
+    margin:0px auto;
+  }
+
+
+  /* 포트폴리오 1 */
+  .port01, .port02, .port03, .port04{
+    width:1240px; height:960px;
+    position:relative;
+    overflow:hidden;
+  }
+  .r_box{
+    box-sizing:border-box !important;
+  }
+  .r_box > p{
+    line-height:25px;
+    color:#fff;
+    text-align:center;
+    font-size:23px;
+    display:none;
+  }
+  .r_box .p00{
+    padding:120px 0px;
+  }
+  .r_box .p01{
+    font-size:16px !important;
+    padding:5px 0px;
+  }
+  .r_box .p02{
+    font-size:15px !important;
+    padding-top:20px;
+  }
+  .r_box .p02 span{
+    font-size:18px;
+  }
+  .r_box span a{
+    transition:0.2s;
+  }
+  .port01 > .img_box{
+    width:710px; height:480px;
+    background-image:url(../images/mockup1.jpg);
+    background-size:100% 100%;
+    position:absolute;
+    top:25%; left:-65%;
+    background-color:#fff;
+    z-index:10;
+    opacity:0;
+  }
+  .port01 > .img_box > img{
+    width:168px;
+  }
+  .port01 > .img_box > h2{
+    position:absolute;
+    top:24px; left:23%;
+    font-size:22px;
+    font-weight:bold;
+  }
+  .port01 > .img_box > p{
+    position:absolute;
+    bottom:15px; right:10px;
+    font-size:12px;
+  }
+  .port01 > .l_box{
+    width:1050px; height:440px;
+    background-color:#000;
+    position:absolute;
+    top:27%;
+    z-index:1;
+  }
+  .port01 > .r_box{
+    width:420px; height:680px;
+    background-image:url(../images/port1.png);
+    position:relative;
+    top:-100%;
+    float:right;
+    z-index:1;
+    opacity:0;
+  }
+  .port01 .r_box > span{
+    display:inline-block;
+    border:1px solid #333;
+    background-color:#fff;
+    margin:130px 0px 150px 75px;
+    border-radius: 5px;
+    opacity:0;
+  }
+  .port01 > .r_box > span > a{
+    color:#000;
+    font-size:14px;
+    display:block;
+    padding:5px 10px;
+  }
+  .port01 > .r_box > span > a:hover{
+    background-color:rgb(24, 42, 65);
+    color:#fff !important;
+  }
+
+
+  /* 포트폴리오 2 */
+  .port02 > .img_box{
+    width:710px; height:480px;
+    background-image:url(../images/mockup2.jpg);
+    background-size:100% 100%;
+    position:absolute;
+    top:25%; right:0px;
+    background-color:#fff;
+    z-index:10;
+    opacity:0;
+  }
+  .port02 > .img_box > img{
+    float:right;
+    width:148px;
+  }
+  .port02 > .img_box > h2{
+    position:absolute;
+    top:24px; right:22%;
+    color:#fff;
+    font-size:22px;
+    font-weight:bold;
+  }
+  .port02 > .img_box > p{
+    position:absolute;
+    bottom:15px; left:10px;
+    font-size:12px;
+    color:rgb(212, 212, 212);
+  }
+  .port02 > .l_box{
+    width:1050px; height:440px;
+    background-color:#000;
+    position:absolute;
+    top:27%; right:0px;
+    z-index:1;
+  }
+  .port02 > .r_box{
+    width:420px; height:680px;
+    background-image:url(../images/port2.png);
+    position:relative;
+    top:15%;
+    float:left;
+    z-index:1;
+    opacity:0;
+  }
+  .port02 .r_box > span{
+    display:inline-block;
+    border:1px solid #333;
+    background-color:#fff;
+    margin:110px 0px 150px 85px;
+    border-radius: 5px;
+    opacity:0;
+  }
+  .port02 > .r_box > span > a{
+    color:#000;
+    font-size:14px;
+    display:block;
+    padding:5px 10px;
+  }
+  .port02 > .r_box > span > a:hover{
+    background-color:rgb(24, 39, 23);
+    color:#fff !important;
+  }
+
+
+  /* 포트폴리오 3 */
+  .port03 > .img_box{
+    width:710px; height:480px;
+    background-image:url(../images/mockup3.jpg);
+    background-size:100% 100%;
+    position:absolute;
+    top:25%; left:-65%;
+    background-color:#fff;
+    z-index:10;
+    opacity:0;
+  }
+  .port03 > .img_box > img{
+    width:168px;
+  }
+  .port03 > .img_box > h2{
+    position:absolute;
+    top:24px; left:24%;
+    color:#fff;
+    font-size:25px;
+    font-weight:bold;
+  }
+  .port03 > .img_box > p{
+    position:absolute;
+    bottom:15px; right:10px;
+    font-size:12px;
+    color:#000;
+  }
+  .port03 > .l_box{
+    width:1050px; height:440px;
+    background-color:#000;
+    position:absolute;
+    top:27%;
+    z-index:1;
+  }
+  .port03 > .r_box{
+    width:420px; height:680px;
+    background-image:url(../images/port3.png);
+    position:relative;
+    top:-100%;
+    float:right;
+    z-index:1;
+    opacity:0;
+  }
+  .port03 .r_box > span{
+    display:inline-block;
+    border:1px solid #333;
+    background-color:#fff;
+    margin:110px 0px 150px 85px;
+    border-radius: 5px;
+    opacity:0;
+  }
+  .port03 > .r_box > span > a{
+    color:#000;
+    font-size:14px;
+    display:block;
+    padding:5px 10px;
+  }
+  .port03 > .r_box > span > a:hover{
+    background-color:rgb(46, 39, 25);
+    color:#fff !important;
+  }
+
+
+  /* 포트폴리오 4 */
+  .port04 > .img_box{
+    width:710px; height:480px;
+    background-image:url(../images/mockup4.jpg);
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    position:absolute;
+    top:25%; right:0px;
+    background-color:#fff;
+    z-index:10;
+    opacity:0;
+  }
+  .port04 > .img_box > img{
+    float:right;
+    width:168px;
+  }
+  .port04 > .img_box > h2{
+    position:absolute;
+    top:24px; right:22%;
+    font-size:25px;
+    font-weight:bold;
+  }
+  .port04 > .img_box > p{
+    position:absolute;
+    bottom:15px; left:10px;
+    font-size:12px;
+  }
+  
+  .port04 > .l_box{
+    width:1050px; height:440px;
+    background-color:#000;
+    position:absolute;
+    top:27%; right:0px;
+    z-index:1;
+  }
+  .port04 > .r_box{
+    width:420px; height:680px;
+    background-image:url(../images/port4.png);
+    position:relative;
+    top:15%;
+    float:left;
+    z-index:1;
+    opacity:0;
+  }
+  .port04 .r_box > span{
+    display:inline-block;
+    border:1px solid #333;
+    background-color:#fff;
+    margin:110px 0px 150px 85px;
+    border-radius: 5px;
+    opacity:0;
+  }
+  .port04 > .r_box > span > a{
+    color:#000;
+    font-size:14px;
+    display:block;
+    padding:5px 10px;
+  }
+  .port04 > .r_box > span > a:hover{
+    background-color:rgb(0, 0, 0);
+    color:#fff !important;
+  }
+
+  /* 스크롤 값 보이기 */
+  .status{
+    position:fixed;
+    top:100px; right:100px;
+    background:#ffff00;
+    color:#f00; font-size:20px;
+    z-index:9999;
+  }
+
+/* skill시작 */
+  #gallery{
+    width:100%; height:960px;
+    background:rgb(92, 140, 189);
+  }
+
+
+  /* contact시작 */
+  #contact{
+    width:100%; height:830px;
+    background-color:#333;
+    margin:0px auto;
+    position:relative;
+  }
+  #contact > .txt01{
+    position:absolute;
+    top:5%; left:0%;
+    font-size:45px;
+    color:#fff;
+    font-family:"jalnan", arial, sans-serif;
+  }
+  #contact > .txt02{
+    position:absolute;
+    top:20%; right:0%;
+    font-size:45px;
+    color:#fff;
+    font-family:"jalnan", arial, sans-serif;
+  }
+  #contact > #con_box{
+    width:1240px; height:450px;
+    position:absolute;
+    top:40%; left:50%;
+    transform:translatex(-50%);
+    background-color:#222;
+    display:flex;
+  }
+  #contact > #con_box > h3{
+    position:absolute;
+    top:20px; left:50%;
+    transform:translate(-50%);
+    color:#fff;
+    font-weight:bold;
+    font-size:20px;
+  }
+  .txt_box{
+    width:620px; height:250px;
+  }
+  .txt_box > p{
+    text-align:center;
+    margin:80px 0px 0px 50px;
+    line-height:21px;
+    color:#fff;
+  }
+  .img_box{
+    width:570px; height:155px;
+    background-color:#ccc;  
+    margin:20px 0px 0px 50px;
+  }
+  .email{
+    width:620px; height:450px;
+  }
+  .email > ul{
+    color:#fff;
+    margin:50px 0px 0px 30px;
+  }
+  .email > ul > li{
+    height:90px;
+    display:flex;
+  }
+  .email  img{
+    width:85px; height:85px;
+    display:block;
+    margin:20px;
+  }
+  .email span{
+    line-height:20px;
+    padding:40px 0px;
+  }
+  .email > ul > li:nth-child(3) span{
+    padding:50px 0px;
+  }
+  .email > ul > li:last-child span{
+    padding:50px 0px;
+  }
+
+
+
+
+  /* 푸터시작 */
+  footer{
+    width:100%; height:130px;
+    background-color:#8E8E8E;
+    font-size:14px;
+  }
+  footer > address{
+    text-align:center;
+    transform:translateY(50px);
+    line-height:20px;
+  }
+  footer > address > span{
+    color:#000;
+  }
+
+  @keyframes ani{
+    0%{top:85px}
+    50%{top:90px}
+    100%{top:85px}
+  }
+
+  /* 타이핑 */
+
+  /* #typing {
+    display: inline-block;
+    animation-name: cursor;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+  } */
+  @keyframes cursor{
+      0%{border-right: 1px solid #fff}
+      50%{border-right: 1px solid #000}
+      100%{border-right: 1px solid #fff}
+  }
