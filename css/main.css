@@ -1,5 +1,54 @@
 @charset "utf-8";
 
+  #modal{
+    width:100%; height:100%;
+    position:fixed;
+    top:50%; left:50%;
+    background-color:rgba(0, 0, 0, 0.7);
+    transform:translate(-50%, -50%);
+    z-index:9999;
+  } 
+  #modal > .b{
+    text-align:center;
+    position:fixed;
+    top:50%; left:50%;
+    transform:translate(-50%, -50%);
+    width:300px; height:270px;
+    font-size:16px; 
+    color:#333;
+    padding:50px 30px;
+    background-color:#fff;
+    line-height:25px;
+    background-image:url(../images/modal.jpeg);
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+  }
+  #modal > .b > img{
+    width:60%;
+    text-align:center;
+  }
+  #modal span{
+    font-weight:bold;
+    color:#fff;
+    background-color:#333;
+    border-radius:5px;
+    padding:2px;
+  }
+  #modal .close{
+    position:absolute;
+    bottom:20px; left:50%;
+    transform:translateX(-50%);
+  }
+  #modal .close a{
+    color:#fff;
+    display:block;
+    padding:0px 9px;
+    font-size:12px;
+  }
+  #modal .close:hover a{
+    background-color:#fff;
+    color:#333;
+  }
   /* 헤더시작 */
   header{
     position:fixed;
@@ -149,7 +198,7 @@
     position:absolute;
     bottom:2%; left:50%;
     transform:translateX(-50%);
-    z-index:9999;
+    z-index:9998;
   }
   .wheel img{
     width:80px; 
@@ -257,9 +306,9 @@
     overflow:hidden;
   }
   .profile .p_box02 img{
-    width:420px;
+    width:370px;
     position:absolute;
-    left:0px;
+    left:30px;
   }
   
   .career{
@@ -300,7 +349,7 @@
     overflow:hidden;
   }
   .career .p_box02 img{
-    width:420px;
+    width:360px;
     position:absolute;
     top:0px; left:0px;
   }
@@ -718,13 +767,13 @@
   }
 
   /* 스크롤 값 보이기 */
-  .status{
+  /* .status{
     position:fixed;
     top:100px; right:100px;
     background:#ffff00;
     color:#f00; font-size:20px;
     z-index:9999;
-  }
+  } */
 
 /* skill시작 */
   #gallery{
@@ -772,6 +821,7 @@
   }
   .txt_box{
     width:620px; height:250px;
+    margin-top:60px;
   }
   .txt_box > p{
     text-align:center;
