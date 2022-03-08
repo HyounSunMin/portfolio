@@ -11,15 +11,17 @@
   <link rel="stylesheet" href="./css/reset.css" type="text/css">
   <link rel="stylesheet" href="./css/swiper.css" type="text/css">
   <link rel="stylesheet" href="./css/main.css" type="text/css">
-  <script src="js/prefixfree.min.js"></script>
+  <script src="./js/prefixfree.min.js"></script>
   <script src="./js/jquery-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
-  <script src="js/main.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/jquery-animate-css-rotate-scale.js"></script>
 </head>
 <body>
   <div id="modal">
+    <div class="t"></div>
     <div class="b">
-      <img src="./images/logo_b.png" alt="로고">
+      <img src="./images/logo_b.png" alt="로고" class="m_logo">
       <p>
         본사이트는 상업용 목적이 아닌<br>
         <span>개인포트폴리오</span>용도로 만들어졌습니다.<br>
@@ -204,74 +206,111 @@
       
       <section id="portfolio">
         <article class="port01">
-          <article class="img_box">
-            <img src="./images/number1.png" alt="포트폴리오1">
-            <h2>오이도 앱(APP)</h2>
-            <p>오이도사이트의 모바일버전을 사용자편의성에 맞게 제작하였습니다.</p>
-          </article>
-          <div class="l_box"></div>
-          <div class="r_box">
-            <p class="p00">사이트 디자인</p>
-            <p class="p01">참여도 : 코딩&디자인 100%</p>
-            <p class="p01">제작기간 : 2021.08.23 ~ 2021.09.13</p>
-            <p class="p02"><span>개발도구</span><br>adobe XD, illustrator, photoshop</p>
-            <span><a href="#" title="사이트보기">design view</a></span>
-            <span><a href="#" title="작업과정">process</a></span>
+          <div class="img_box">
+            <img src="./images/number1.png" alt="프로젝트1" class="img01">
+            <img src="./images/p_border.png" alt="원" class="img02">
+            <img src="./images/p_border2.png" alt="테두리" class="img03">
+            <div class="m_img01"><img src="./images/mockup_b.jpg" alt="목업1" class="img04"></div>
+            <div class="icon01"><img src="./images/icon/lighthouse.png" alt="등대"><span>Oido</span></div>
+          </div>
+          <div class="txt_box">
+            <img src="./images/t_commas.png" alt="쉼표" class="t_commas">
+            <img src="./images/b_commas.png" alt="쉼표" class="b_commas">
+            <p class="title"><img src="./images/point.png" alt="포인트" class="point">PROJECT01</p>
+            <p class="sub_title">오이도 mobile 앱</p>
+            <p class="intro">제일 처음에했던 프로젝트입니다.<br>
+              오이도섬을 주제로 선정하여 기존사이트의 정보를 바탕으로<br> 
+              사용자의 편의성을 고려하여UI/UX디자인을 제작하였습니다.
+            </p>
+            <p class="plan">
+              참여도 : 코딩 & 디자인 100% <br>
+              제작기간 : 2021.08.23 ~ 2021.09.13<br>
+              개발도구 : adobeXD, illustrator, photoshop
+            </p>
+            <span class="btn01"><a href="" title="디자인보기">design view</a></span>
+            <span class="btn02"><a href="" title="작업과정">process</a></span>
           </div>
         </article>
 
         <article class="port02">
-          <article class="img_box">
-            <img src="./images/number2_w.png" alt="포트폴리오1">
-            <h2>통나무파크 사이트</h2>
-            <p>제주 통나무파크 사이트의 문제점과 수정할점들을 찾아 
-              사용자의 편의성에 맞게 반응형사이트로 제작하였습니다.</p>
-          </article>
-          <div class="l_box"></div>
-          <div class="r_box">
-            <p class="p00">사이트 디자인</p>
-            <p class="p01">참여도 : 코딩&디자인 100%</p>
-            <p class="p01">제작기간 : 2021.9.14 ~ 2021.10.20</p>
-            <p class="p02"><span>개발도구</span><br>Photoshop, illustrator<br>HTML5, CSS3, Jquery</p>
-            <span><a href="http://gustjsals.dothome.co.kr/pension/" title="사이트보기" target="_blank">site view</a></span>
-            <span><a href="./p2_page.html" title="작업과정" target="_blank">process</a></span>
+          <div class="txt_box">
+            <img src="./images/t_commas.png" alt="쉼표" class="t_commas">
+            <img src="./images/b_commas.png" alt="쉼표" class="b_commas">
+            <p class="title"><img src="./images/point.png" alt="포인트" class="point">PROJECT02</p>
+            <p class="sub_title">통나무파크 반응형웹</p>
+            <p class="intro">기본에있던 적응형 통나무파크 사이트를<br>
+              문제점과 수정할점들을 찾아 사용자의 편의성에<br>
+              맞게 반응형사이트로 제작하였습니다.
+            </p>
+            <p class="plan">
+              참여도 : 코딩 & 디자인 100% <br>
+              제작기간 : 2021.09.14 ~ 2021.10.20<br>
+              개발도구 : Photoshop, illustrator, HTML5, CSS3, JQUERY
+            </p>
+            <span class="btn01"><a href="http://gustjsals.dothome.co.kr/pension/" title="사이트보기">site view</a></span>
+            <span class="btn02"><a href="./p2_page.html" title="작업과정">process</a></span>
           </div>
+          <div class="img_box">
+            <img src="./images/number2_w.png" alt="프로젝트2" class="img01">
+            <img src="./images/p_border.png" alt="원" class="img02">
+            <img src="./images/p_border2.png" alt="테두리" class="img03">
+            <div class="m_img02"><img src="./images/mockup2_b.jpg" alt="목업2" class="img04"></div>
+            <div class="icon02"><img src="./images/icon/tree.png" alt="나무"><span>Logpark</span></div>
+          </div>
+
         </article>
 
         <article class="port03">
-          <article class="img_box"> 
-            <img src="./images/number3_w.png" alt="포트폴리오1">
-            <h2>맘스터치 사이트</h2>
-            <p>기존에있던 맘스터치 사이트를 새로운 디자인, 레이아웃을
-              적용하여 반응형 사이트로 제작하였습니다.</p>
-          </article>
-          <div class="l_box"></div>
-          <div class="r_box">
-            <p class="p00">사이트 디자인</p>
-            <p class="p01">참여도 : 코딩&디자인 100%</p>
-            <p class="p01">제작기간 : 2021.10.21 ~ 2021.11.27</p>
-            <p class="p02"><span>개발도구</span><br>Photoshop, illustrator<br>HTML5, CSS3, Jquery</p>
-            <span><a href="http://gustjsals.dothome.co.kr/food/" title="사이트보기" target="_blank">site view</a></span>
-            <span><a href="#" title="작업과정">process</a></span>
+          <div class="img_box">
+            <img src="./images/number3_w.png" alt="프로젝트3" class="img01">
+            <img src="./images/p_border.png" alt="원" class="img02">
+            <img src="./images/p_border2.png" alt="테두리" class="img03">
+            <div class="m_img03"><img src="./images/mockup3_b.jpg" alt="목업3" class="img04"></div>
+            <div class="icon03"><img src="./images/icon/hamburger.png" alt="햄버거"><span>Mom's touch</span></div>
+          </div>
+          <div class="txt_box">
+            <img src="./images/t_commas.png" alt="쉼표" class="t_commas">
+            <img src="./images/b_commas.png" alt="쉼표" class="b_commas">
+            <p class="title"><img src="./images/point.png" alt="포인트" class="point">PROJECT03</p>
+            <p class="sub_title">맘스터치 반응형웹</p>
+            <p class="intro">기존에있던 맘스터치 사이트를 새로운 디자인, 레이아웃을<br>
+              적용하여 반응형 사이트로 제작하였습니다
+            </p>
+            <p class="plan">
+              참여도 : 코딩 & 디자인 100% <br>
+              제작기간 : 2021.10.21 ~ 2021.11.27<br>
+              개발도구 : adobe XD, illustrator, photoshop, HTML5, CSS3, JQUERY
+            </p>
+            <span class="btn01"><a href="http://gustjsals.dothome.co.kr/food" title="사이트보기">site view</a></span>
+            <span class="btn02"><a href="" title="작업과정">process</a></span>
           </div>
         </article>
 
         <article class="port04">
-          <article class="img_box">
-            <img src="./images/number4.png" alt="포트폴리오1">
-            <h2>네이버 클로바 사이트</h2>
-            <p>기존 네이버 클로바사이트를 사용자 시나리오(페르소나)에 맞게 PC버전으로 제작하였습니다.</p>
-          </article>
-          <div class="l_box"></div>
-          <div class="r_box">
-            <p class="p00">사이트 디자인</p>
-            <p class="p01">참여도 : 코딩&디자인 100%</p>
-            <p class="p01">제작기간 : 2021.12.01 ~ 2021.12.23</p>
-            <p class="p02"><span>개발도구</span><br>Photoshop, illustrator<br>HTML5, CSS3, Jquery</p>
-            <span><a href="#" title="사이트보기">site view</a></span>
-            <span><a href="#" title="작업과정">process</a></span>
+          <div class="txt_box">
+            <img src="./images/t_commas.png" alt="쉼표" class="t_commas">
+            <img src="./images/b_commas.png" alt="쉼표" class="b_commas">
+            <p class="title"><img src="./images/point.png" alt="포인트" class="point">PROJECT04</p>
+            <p class="sub_title">네이버클로바</p>
+            <p class="intro">기존 네이버 클로바사이트를 사용자 시나리오에<br>
+              맞게 원스크롤 레이아웃을 사용하여 pc버전을<br>
+              제작하였습니다. 
+            </p>
+            <p class="plan">
+              참여도 : 코딩 & 디자인 100% <br>
+              제작기간 : 2021.12.01 ~ 2021.12.23<br>
+              개발도구 : adobe XD, illustrator, photoshop, HTML5, CSS3, JQUERY
+            </p>
+            <span class="btn01"><a href="https://hyounsunmin.github.io/naverclova" title="사이트보기">site view</a></span>
+            <span class="btn02"><a href="" title="작업과정">process</a></span>
           </div>
-        </article>
+          <div class="img_box">
+            <img src="./images/number4.png" alt="프로젝트4" class="img01">
+            <img src="./images/p_border.png" alt="원" class="img02">
+            <img src="./images/p_border2.png" alt="테두리" class="img03">
+            <div class="m_img04"><img src="./images/mockup4_b.jpg" alt="목업4" class="img04"></div>
+            <div class="icon04"><img src="./images/icon/naver.png" alt="네이버"><span>naver</span></div>
+          </div>
       </section>
 
       <!-- 갤러리 시작 -->
@@ -295,7 +334,7 @@
               그리고 언제나 배우고 발전하는 자세로 노력하겠습니다.<br>
               감사합니다.
             </p>
-            <!-- <div class="img_box"></div> -->
+            <div class="img_box"></div>
           </div>
           <div class="email">
             <ul>

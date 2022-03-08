@@ -1,5 +1,14 @@
 $(document).ready(function(){
 
+    $('html #modal').on('scroll touchmove mousewheel', function(e){
+
+      e.preventDefault();
+      
+      e.stopPropagation(); 
+      
+      return false;
+      
+      })
 
     //스크롤 좌표값 보이기
     $(window).scroll(function(){
@@ -9,12 +18,12 @@ $(document).ready(function(){
       
       if(sPos >= 90){
         $('header').css('top','-80px');
-        $('header > nav > .arrow ').stop().fadeIn(1200);
-        $('header > nav > .menu01').stop().fadeIn(100);
+        $('header > nav > .arrow ').fadeIn();
+        $('header > nav > .menu01').fadeIn();
       }else{
         $('header').css('top','0px');
-        $('header > nav > .arrow').stop().fadeOut(700);
-        $('header > nav > .menu01').stop().fadeOut(100);
+        $('header > nav > .arrow').fadeOut();
+        $('header > nav > .menu01').hide();
       };
 
       //헤더 서식 act01 
@@ -40,11 +49,11 @@ $(document).ready(function(){
 
 
       //어바웃 애니효과
-      if(sPos >= 700 && sPos <= 1900){
-        $('.profile > h3').stop().fadeIn(1000);
-        $('.profile > .hide_box').stop().animate({'height':'315px'}, 1000, function(){
-          $('.profile > .hide_box').stop().animate({'width':'350px'}, 500, function(){
-            $('.profile > .p_box02').stop().animate({'width':'500px'}, 100).animate({'height':'550px'}, 700, function(){
+      if(sPos >= 500){
+        $('.profile > h3').fadeIn(1000);
+        $('.profile > .hide_box').animate({'height':'315px'}, 1000, function(){
+          $('.profile > .hide_box').animate({'width':'350px'}, 500, function(){
+            $('.profile > .p_box02').animate({'width':'500px'}, 100).animate({'height':'550px'}, 700, function(){
               //스킬 게이지바
               $('.skill > .Photo > .g_box > .gauge').animate({'bottom':'-50%'},1000, 'easeInOutQuart');
               $('.skill > .illust > .g_box > .gauge').animate({'bottom':'-45%'},1600, 'easeInOutQuart');
@@ -56,16 +65,16 @@ $(document).ready(function(){
           });
         });
         }else{
-          $('.profile > h3').stop().hide();
-          $('.profile > .hide_box').stop().animate({'height':'0px'}, 100).stop().animate({'width':'0px'}, 100);
-          $('.profile > .p_box02').stop().animate({'width':'0px'}, 100).stop().animate({'height':'0px'}, 100);
+          $('.profile > h3').hide();
+          $('.profile > .hide_box').css('height','0px').css('width','0px');
+          $('.profile > .p_box02').css('width','0px').css('height','0px');
           //스킬 게이지바
-          $('.skill > .Photo > .g_box > .gauge').stop().animate({'bottom':'-100%'},100);
-          $('.skill > .illust > .g_box > .gauge').stop().animate({'bottom':'-100%'},100);
-          $('.skill > .HTML > .g_box > .gauge').stop().animate({'bottom':'-100%'},100);
-          $('.skill > .CSS > .g_box > .gauge').stop().animate({'bottom':'-100%'},100);
-          $('.skill > .java > .g_box > .gauge').stop().animate({'bottom':'-100%'},100);
-          $('.skill > .jquery > .g_box > .gauge').stop().animate({'bottom':'-100%'},100);
+          $('.skill > .Photo > .g_box > .gauge').css('bottom','-100%');
+          $('.skill > .illust > .g_box > .gauge').css('bottom','-100%');
+          $('.skill > .HTML > .g_box > .gauge').css('bottom','-100%');
+          $('.skill > .CSS > .g_box > .gauge').css('bottom','-100%');
+          $('.skill > .java > .g_box > .gauge').css('bottom','-100%');
+          $('.skill > .jquery > .g_box > .gauge').css('bottom','-100%');
         };
           
       
@@ -225,6 +234,13 @@ $(document).ready(function(){
       $('html, body').stop().animate({scrollTop:$('#portfolio > article').eq(n).offset().top},500);
     });
 
+
+    //포트폴리오 원 회전애니메이션
+    // function rotate(){
+    //   $('.port01 > .img_box > .img02').animate({'rotate':'180deg'}, 500);
+    // };
+    // setInterval(rotate, 1000);
+
     //휠 애니메이션
     function wheel(){
       $('.wheel span').animate({'bottom':'65%'},1500).animate({'bottom':'25%'},1500);
@@ -240,8 +256,8 @@ $(document).ready(function(){
 
       $('#about_box01 > ul > li > a').removeClass('font');
       $(this).addClass('font');
-      $('#about_box01 > ul > li > div').stop().slideUp(700);
-      $(this).next().fadeIn(2500);
+      $('#about_box01 > ul > li > div').stop().fadeOut(700);
+      $(this).next().stop().slideDown(1500);
 
       return false;
     });
@@ -262,6 +278,12 @@ $(document).ready(function(){
     };
     let Timer = setInterval(fadeInOut, 4500);
 
+    //모달창끄기
+    $('#modal > .b a').click(function(){
+      $('#modal').fadeOut();
+
+      return false;
+    });
     
 
 
